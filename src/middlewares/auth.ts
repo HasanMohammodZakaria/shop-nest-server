@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { verifyToken } from '../lib/jwt';
-import AppError from '@/utils/appError';
+import AppError from '../utils/appError';
 
 
 /**
