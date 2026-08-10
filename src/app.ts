@@ -1,7 +1,9 @@
 import express, { Application, Request, Response } from "express";
 import cors from "cors";
 import { notFoundHandler } from "./middlewares/notFoundHandler";
-import { globalErrorHandler } from "./middlewares/globalErrorHandler";
+import globalErrorHandler from "./middlewares/globalErrorHandler";
+import routes from "./routes";
+
 
 
 const app: Application = express();
@@ -23,6 +25,8 @@ app.get("/", (_req: Request, res: Response) => {
     data: null,
   });
 });
+
+app.use("/api", routes);
 
 app.use(notFoundHandler);
 app.use(globalErrorHandler);
