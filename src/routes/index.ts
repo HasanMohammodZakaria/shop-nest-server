@@ -4,8 +4,7 @@ import { categoryRoutes } from './category.routes';
 import { productRoutes } from './product.routes';
 import { reviewRoutes } from './review.routes';
 // import { userRoutes } from './user.routes';
-// import { reviewRoutes } from './review.routes';
-// import { orderRoutes } from './order.routes';
+import { orderRoutes } from './order.routes';
 // import { wishlistRoutes } from './wishlist.routes';
 
 const router = Router();
@@ -16,7 +15,7 @@ const moduleRoutes: { path: string; route: Router }[] = [
   { path: '/products', route: productRoutes },
   //{ path: '/users', route: userRoutes },
   { path: '/reviews', route: reviewRoutes },
-  // { path: '/orders', route: orderRoutes },
+  { path: '/orders', route: orderRoutes },
   // { path: '/wishlist', route: wishlistRoutes },
 ];
 
