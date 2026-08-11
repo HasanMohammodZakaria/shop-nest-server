@@ -5,7 +5,7 @@ import { productRoutes } from './product.routes';
 import { reviewRoutes } from './review.routes';
 // import { userRoutes } from './user.routes';
 import { orderRoutes } from './order.routes';
-// import { wishlistRoutes } from './wishlist.routes';
+import { wishlistRoutes } from './wishlist.routes';
 
 const router = Router();
 
@@ -16,7 +16,7 @@ const moduleRoutes: { path: string; route: Router }[] = [
   //{ path: '/users', route: userRoutes },
   { path: '/reviews', route: reviewRoutes },
   { path: '/orders', route: orderRoutes },
-  // { path: '/wishlist', route: wishlistRoutes },
+  { path: '/wishlist', route: wishlistRoutes },
 ];
 
 moduleRoutes.forEach((r) => router.use(r.path, r.route));
