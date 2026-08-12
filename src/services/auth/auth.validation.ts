@@ -10,6 +10,7 @@ const registerSchema = z.object({
     password: z
       .string({ error: 'Password is required' })
       .min(6, 'Password must be at least 6 characters'),
+    image: z.string().url('Image must be a valid URL').optional(),
   }),
 });
 
