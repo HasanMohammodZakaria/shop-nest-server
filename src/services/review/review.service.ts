@@ -114,7 +114,7 @@ const getRecentReviews = async (limit: number = 6) => {
     take: limit,
     orderBy: { createdAt: 'desc' },
     include: {
-      user: { select: { id: true, name: true } },
+      user: { select: { id: true, name: true, image: true } },
       product: { select: { id: true, name: true } },
     },
   });
