@@ -8,6 +8,7 @@ import { Router } from 'express';
 const router = Router();
 
 // Public routes
+router.get('/recent', reviewController.getRecentReviews);
 router.get('/product/:productId', reviewController.getReviewsByProduct);
 router.get('/:id', reviewController.getReviewById);
 

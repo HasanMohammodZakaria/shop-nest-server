@@ -57,10 +57,21 @@ const deleteReview = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getRecentReviews = catchAsync(async (req: Request, res: Response) => {
+  const limit = req.query.limit ? Number(req.query.limit) : 6;
+  const result = await reviewService.getRecentReviews(limit);
+  sendResponse(res, 200, {
+    success: true,
+    message: 'Recent reviews retrieved successfully',
+    data: result,
+  });
+});
+
 export const reviewController = {
   createReview,
   getReviewsByProduct,
   getReviewById,
   updateReview,
   deleteReview,
+  getRecentReviews,
 };

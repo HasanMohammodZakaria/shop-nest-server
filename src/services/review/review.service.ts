@@ -108,10 +108,23 @@ const deleteReview = async (id: string, userId: string, userRole: string) => {
   });
 };
 
+const getRecentReviews = async (limit: number = 6) => {
+  return prisma.review.findMany({
+    where: { isDeleted: false },
+    take: limit,
+    orderBy: { createdAt: 'desc' },
+    include: {
+      user: { select: { id: true, name: true } },
+      product: { select: { id: true, name: true } },
+    },
+  });
+};
+
 export const reviewService = {
   createReview,
   getReviewsByProduct,
   getReviewById,
   updateReview,
   deleteReview,
+   getRecentReviews
 };
