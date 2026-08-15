@@ -18,6 +18,8 @@ const loginSchema = z.object({
   body: z.object({
     email: z.string({ error: 'Email is required' }).email('Invalid email address'),
     password: z.string({ error: 'Password is required' }),
+     phone: z.string().min(6, 'Invalid phone number').max(20).optional(),
+    address: z.string().max(300).optional(),
   }),
 });
 

@@ -8,6 +8,8 @@ interface RegisterInput {
   email: string;
   password: string;
   image?: string;
+  phone?: string;
+  address?: string;
 }
 
 interface LoginInput {
@@ -32,6 +34,8 @@ const registerUser = async (payload: RegisterInput) => {
       email: payload.email,
       password: hashedPassword,
       image: payload.image,
+      phone: payload.phone,
+      address: payload.address,
     },
   });
 
