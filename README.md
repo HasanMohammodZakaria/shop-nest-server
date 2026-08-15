@@ -662,5 +662,5 @@ Only allowed while the order is still `PENDING`.
 
 - **Live Backend API:** https://shop-nest-server-2ppf.onrender.com
 - **Live Frontend:** https://shopnest-liart-zeta.vercel.app
-- **GitHub Repository (Backend):** https://github.com/HasanMohammodZakaria/shop-nest-client
-- **GitHub Repository (Frontend):** https://github.com/HasanMohammodZakaria/shop-nest-server
+- **GitHub Repository (Frontend ):** https://github.com/HasanMohammodZakaria/shop-nest-client
+- **GitHub Repository (Backend):** https://github.com/HasanMohammodZakaria/shop-nest-server
